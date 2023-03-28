@@ -1,0 +1,12 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  min-height: 100dvh;
+  min-height: 100vh;
+}
+
+.title { 
+  text-transform: capitalize;
+}
