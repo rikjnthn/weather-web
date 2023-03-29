@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import process from "process";
 import axios from "axios";
+import process from "process";
 
 import {
   WeatherType,
@@ -14,7 +14,7 @@ const env = process.env.API_KEY;
 
 async function getWeather(city: string): Promise<WeatherType> {
   const { data } = await axios.get<WeatherTypeApi>(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${env?.API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${env}`
   );
   return {
     main: data.weather[0].main,
@@ -32,7 +32,7 @@ async function getWeather(city: string): Promise<WeatherType> {
 
 async function getWeatherForecast(city: string): Promise<WeatherForecastType> {
   const { data } = await axios.get<WeatherForecastApiType>(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${env?.API_KEY}`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${env}`
   );
 
   const hourly = data.list
