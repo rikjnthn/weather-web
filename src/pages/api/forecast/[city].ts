@@ -1,5 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
+import axios from "axios";
+import dotenv from "dotenv";
+
 import {
   WeatherType,
   WeatherTypeApi,
@@ -7,11 +10,11 @@ import {
   WeatherForecastType,
 } from "@/types/WeatherType";
 
-import axios from "axios";
+const env = dotenv.config().parsed;
 
 async function getWeather(city: string): Promise<WeatherType> {
   const { data } = await axios.get<WeatherTypeApi>(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${env?.API_KEY}`
   );
   return {
     main: data.weather[0].main,
@@ -29,7 +32,7 @@ async function getWeather(city: string): Promise<WeatherType> {
 
 async function getWeatherForecast(city: string): Promise<WeatherForecastType> {
   const { data } = await axios.get<WeatherForecastApiType>(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${env?.API_KEY}`
   );
 
   const hourly = data.list
