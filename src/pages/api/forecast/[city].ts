@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
 import process from "process";
-import dotenv from "dotenv";
+import axios from "axios";
 
 import {
   WeatherType,
