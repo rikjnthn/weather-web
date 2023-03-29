@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import axios from "axios";
+import process from "process";
 import dotenv from "dotenv";
 
 import {
@@ -10,7 +10,7 @@ import {
   WeatherForecastType,
 } from "@/types/WeatherType";
 
-const env = dotenv.config().parsed;
+const env = process.env.API_KEY;
 
 async function getWeather(city: string): Promise<WeatherType> {
   const { data } = await axios.get<WeatherTypeApi>(
