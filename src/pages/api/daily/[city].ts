@@ -44,6 +44,7 @@ export default async function handler(
     }
   } catch (e) {
     if (axios.isAxiosError(e)) {
+      res.status(404)
       res.json({
         message: e.message,
         name: e.name,

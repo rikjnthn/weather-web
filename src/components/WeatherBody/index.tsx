@@ -44,8 +44,8 @@ const WeatherBody = () => {
   });
 
   useEffect(() => {
-    setLoading(() => queries.some((val) => val.isLoading === true));
-    setError(() => queries.some((val) => val.isError === false));
+    setLoading(() => queries.some((val) => val.isLoading));
+    setError(() => queries.some((val) => val.isError));
   }, [queries]);
 
   if (loading) return <Loading />;

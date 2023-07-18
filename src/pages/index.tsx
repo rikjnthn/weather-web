@@ -1,29 +1,18 @@
 import Head from "next/head";
-import React, { useEffect, useState } from "react";
 
-import {
-  QueryClient,
-  QueryClientProvider,
-  useIsFetching,
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import { WeatherBody } from "@/components";
-import Loading from "@/components/Loading";
 
 export default function Home() {
-  const [badRequest, setBadRequest] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(true);
-
-  const queriesClient = new QueryClient();
-
-
-  
-  useEffect(() => {
-    setLoading(() => false)
-  }, []);
-  
-  // if (loading) return <Loading />;
+  const queriesClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
 
   return (
     <>

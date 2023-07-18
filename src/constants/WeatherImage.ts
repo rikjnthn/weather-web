@@ -13,4 +13,5 @@ export const WEATHER_IMAGE = {
   thunderstorm: "thunder",
   snow: "snow",
   mist: "mist",
+  haze: 'mist'
 };
