@@ -5,9 +5,6 @@ import { Container, UnorderedList, ListItem, Flex } from "@chakra-ui/react";
 
 import WeatherSection from "../WeatherSection";
 
-import getParam from "@/helper/getParam";
-import useWeatherData from "@/hooks/useWeatherQuery";
-
 import { WEATHER_IMAGE } from "@/constants/WeatherImage";
 import type { WeatherHourlyType } from "@/types/WeatherType";
 
