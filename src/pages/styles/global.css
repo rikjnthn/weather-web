@@ -2,11 +2,11 @@
   display: none;
 }
 
-body {
-  min-height: 100dvh;
-  min-height: 100vh;
+.full-height {
+  min-height: calc(100vh - 6rem);
+  min-height: calc(100dvh - 6rem);
 }
 
-.title { 
+.title {
   text-transform: capitalize;
 }

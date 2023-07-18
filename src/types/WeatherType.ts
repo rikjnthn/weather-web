@@ -31,7 +31,7 @@ export interface WeatherImageType {
   mist: string;
 }
 
-export interface WeatherType {
+export interface WeatherInformationType {
   main: string;
   description: string;
   temperature: number;
@@ -59,25 +59,18 @@ export interface WeatherForecastApiType {
   }>;
 }
 
-export interface WeatherForecastType {
-  hourly: Array<{
-    id: number;
-    time: string;
-    main: string;
-    description: string;
-    temperature: number;
-  }>;
-  daily: Array<{
-    id: number;
-    time: string;
-    main: string;
-    description: string;
-    temperature: number;
-  }>;
+export interface WeatherHourlyType {
+  id: number;
+  time: string;
+  main: string;
+  description: string;
+  temperature: number;
 }
 
-export interface WeatherAndForecastType {
-  weatherDatas: WeatherType;
-  weatherForecast: WeatherForecastType;
+export interface WeatherDailyType {
+  id: number;
+  time: string;
+  main: string;
+  description: string;
+  temperature: number;
 }
-

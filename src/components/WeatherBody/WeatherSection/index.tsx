@@ -10,15 +10,16 @@ const WeatherSection = ({
   return (
     <Flex
       as="section"
-      flexDirection='column'
-      width='full'
-      maxWidth='xl'
+      flexDirection="column"
+      width="full"
+      maxWidth="sm"
       minHeight="20rem"
-      padding="10"
+      paddingY="10"
+      paddingX="6"
       borderRadius="10"
       backgroundColor="#222"
       color="white"
-      overflowX='scroll'
+      overflowX="scroll"
     >
       {children}
     </Flex>
