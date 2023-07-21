@@ -68,7 +68,8 @@ const WeatherBody = () => {
       alignItems="center"
       justifyContent="space-between"
       width="full"
-      paddingBottom="20"
+      paddingInline={{ base: "5", sm: "0" }}
+      paddingBottom={{ md: "20" }}
     >
       <WeatherHero weather={weather.data.data} />
 

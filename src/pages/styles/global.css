@@ -7,6 +7,6 @@
   min-height: calc(100dvh - 6rem);
 }
 
-.title {
+.capitalize {
   text-transform: capitalize;
 }

@@ -1,24 +1,24 @@
 import React from "react";
 
-import { Flex, ListItem } from "@chakra-ui/react";
+import { ListItem } from "@chakra-ui/react";
 
 const WeatherInformation = ({
   title,
   children,
 }: {
   title?: string;
-  children: JSX.Element[];
+  children: JSX.Element[] | JSX.Element;
 }) => {
   return (
-    <Flex
-      as={ListItem}
+    <ListItem
+      display='flex'
       title={title}
       justifyContent='space-between'
       alignItems="center"
       width='full'
     >
       {children}
-    </Flex>
+    </ListItem>
   );
 };
 

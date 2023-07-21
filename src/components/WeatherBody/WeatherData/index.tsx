@@ -19,10 +19,10 @@ const WeatherData = ({ weather }: { weather: WeatherInformationType }) => {
       >
         <WeatherInformation title="Temperature High/Low">
           <IconComponent src="/temperature.svg" alt="Temperature" />
-          <span>
-            {weather.temperature_max - 273}&#8451; /{" "}
-            {weather.temperature_min - 273}&#8451;
-          </span>
+          <div>
+            <span>{weather.temperature_max - 273}&#8451; / </span>
+            <span>{weather.temperature_min - 273}&#8451;</span>
+          </div>
         </WeatherInformation>
         <WeatherInformation title="Wind">
           <IconComponent src="/wind.svg" alt="Wind" />
@@ -37,7 +37,7 @@ const WeatherData = ({ weather }: { weather: WeatherInformationType }) => {
           <span>{weather.pressure} hPa</span>
         </WeatherInformation>
         <WeatherInformation title="Visibility">
-          <IconComponent src="/visibility.svg" alt="Wind Direction" />
+          <IconComponent src="/visibility.svg" alt="Visibility" />
           <span>{weather.visibility} km</span>
         </WeatherInformation>
       </UnorderedList>

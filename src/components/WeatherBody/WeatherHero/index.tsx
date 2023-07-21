@@ -24,7 +24,7 @@ const WeatherHero = ({ weather }: { weather: WeatherInformationType }) => {
       <Image
         src={`/${WEATHER_IMAGE[weatherImg]}.svg`}
         alt={weather.description}
-        title={weather?.description}
+        title={weather.description}
         width="150"
         height="150"
         priority
@@ -39,14 +39,12 @@ const WeatherHero = ({ weather }: { weather: WeatherInformationType }) => {
           fontSize={{ base: "1.5rem", md: "3rem" }}
           paddingInline="0"
         >
-          {weather?.country}
+          {weather.country}
         </Container>
         <Container as="span" fontSize="3rem" paddingInline="0">
-          {weather?.temperature - 273}&#8451;
+          {weather.temperature - 273}&#8451;
         </Container>
-        <Flex gap="8">
-          <span className="title">{weather?.description}</span>
-        </Flex>
+        <span className="capitalize">{weather.description}</span>
       </Flex>
     </Flex>
   );

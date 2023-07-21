@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Flex } from "@chakra-ui/react";
+import { Flex, Container } from "@chakra-ui/react";
 
 const BadResonse = () => {
   return (
@@ -9,10 +9,13 @@ const BadResonse = () => {
       justifyContent="center"
       alignItems="center"
       minHeight="calc(100vh - 6rem)"
+      textAlign="center"
       fontSize="2xl"
       fontWeight="bold"
     >
-      Can&lsquo;t find the place that you looking for
+      <Container as="span">
+        Can&#39;t find the place that you looking for
+      </Container>
     </Flex>
   );
 };
